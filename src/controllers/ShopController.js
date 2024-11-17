@@ -19,8 +19,6 @@ class ShopController {
                 productValues.imageUrl = imageUrls[index % imageUrls.length]; // Chia sẻ đường dẫn hình ảnh
                 return productValues;
             });
-            console.log('1');
-
             // Truyền dữ liệu vào view
             res.render('shop', { products: productData });
             

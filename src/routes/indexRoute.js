@@ -4,10 +4,12 @@ const registerRoute = require("./registerRoute");
 const shopRoute = require ("./shopRoute");
 
 function route(app) {
-    app.use("/register.html", registerRoute);
-    app.use("/about.html", aboutRoute);
-    app.use("/shop.html", shopRoute);
-    app.use("/", homeRoute);
+    app.get("/register.html", registerRoute); 
+    app.post("/register.html", registerRoute);
+
+    app.get("/about.html", aboutRoute);
+    app.get("/shop.html", shopRoute);
+    app.get("/", homeRoute);
     
 }
 

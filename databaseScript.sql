@@ -11,6 +11,14 @@ CREATE TABLE products (
     price DECIMAL(10, 2) NOT NULL       -- Giá sản phẩm
 );
 
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+INSERT INTO users (email, password) VALUES
+('test@gmail.com', '123');
+
 -- Chèn 6 dữ liệu mẫu vào bảng
 INSERT INTO products (product_name, price) VALUES
 ('Product A', 100.00),
@@ -21,4 +29,4 @@ INSERT INTO products (product_name, price) VALUES
 ('Product F', 350.75);
 
 -- Kiểm tra dữ liệu
--- SELECT * FROM products;
+-- SELECT * FROM users;
