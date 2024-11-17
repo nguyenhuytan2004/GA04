@@ -5,6 +5,8 @@ const handlebars = require("express-handlebars");
 const app = express();
 const port = 3000;
 
+const route = require("./routes/indexRoute");
+
 // Đảm bảo Express phục vụ tệp tĩnh từ thư mục 'src/assets' và 'node_modules'
 app.use("/src", express.static("src"));
 app.use("/node_modules", express.static("node_modules"));
@@ -36,9 +38,7 @@ app.set("views", path.join(__dirname, "resources", "views"));
 console.log("Views directory:", path.join(__dirname, "resources", "views"));
 
 // Route handlers
-app.get("/", (req, res) => {
-    res.render("home");
-});
+route(app);
 
 // Start server
 app.listen(port, () => {

@@ -1,8 +1,8 @@
-class NewController {
+class HomeController {
     // [GET] '/'
     index(req, res) {
         res.render("home");
     }
 }
 
-module.exports = new NewController();
+module.exports = new HomeController();
