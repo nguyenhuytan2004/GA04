@@ -34,9 +34,6 @@ app.engine(
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "resources", "views"));
 
-// Test log (can be removed in production)
-console.log("Views directory:", path.join(__dirname, "resources", "views"));
-
 // Route handlers
 route(app);
 

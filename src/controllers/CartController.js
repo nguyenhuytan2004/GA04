@@ -1,7 +1,7 @@
 class AboutController {
-    // [GET] '/about.html'
+    // [GET] '/cart.html'
     index(req, res) {
-        res.render("about");
+        res.render("cart");
     }
 }
 
