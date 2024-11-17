@@ -3,9 +3,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Favicon -->
-        <link rel="icon" type="icon" href="assets/images/GTX_logo.png" />
+        <link rel="icon" type="image/png" href="/src/assets/images/GTX_logo.png" />
         <title>Home page</title>
 
+        <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -13,12 +14,13 @@
             rel="stylesheet"
         />
 
+        <!-- CSS -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         />
-        <link rel="stylesheet" href="assets/css/styles.css" />
-        <link rel="stylesheet" href="assets/css/custom.css" />
+        <link rel="stylesheet" href="/src/assets/css/styles.css" />
+        <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.css" />
     </head>
     <body>
         {{> header}}
@@ -27,10 +29,12 @@
 
         {{> footer}}
 
-        <script src="node_modules/swiper/swiper-bundle.js"></script>
+        <!-- JS -->
+        <script src="/node_modules/swiper/swiper-bundle.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
             defer
         ></script>
+        <script src="/src/assets/js/script.js"></script>
     </body>
 </html>
