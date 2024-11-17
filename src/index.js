@@ -37,6 +37,11 @@ app.set("views", path.join(__dirname, "resources", "views"));
 // Route handlers
 route(app);
 
+app.get("/register", (req, res) => {
+    res.render("register");
+});
+
+
 // Start server
 app.listen(port, () => {
     console.log(`Example app listening on http://localhost:${port}`);
