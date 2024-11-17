@@ -17,7 +17,7 @@ class RegisterController {
             }
 
             
-            console.log(req.body);
+            
             // Tạo người dùng mới
             const newUser = await User.create({
                 email,
