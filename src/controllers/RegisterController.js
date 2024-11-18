@@ -1,4 +1,4 @@
-const User = require("../models/user"); // Import model User
+const User = require("../models/userModel"); // Import model User
 
 class RegisterController {
     // [GET] /register.html - Hiển thị form đăng ký

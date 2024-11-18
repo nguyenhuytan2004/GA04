@@ -42,5 +42,5 @@ CREATE TABLE users (
     email VARCHAR(255) NOT NULL UNIQUE,
     password_1 VARCHAR(255) NOT NULL
 );
-INSERT INTO users (email, password) VALUES
+INSERT INTO users (email, password_1) VALUES
 ('test@gmail.com', '123');
