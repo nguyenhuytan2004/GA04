@@ -36,5 +36,15 @@
             defer
         ></script>
         <script src="/src/assets/js/script.js"></script>
+        <script>
+            setTimeout(() => {
+                const toast = document.querySelector(".toast");
+                if (toast) {
+                    console.log("Hiding toast...");
+                    toast.classList.add("opacity-0", "transition-opacity", "duration-500");
+                    setTimeout(() => toast.remove(), 500);
+                }
+            }, 2000);
+        </script>
     </body>
 </html>

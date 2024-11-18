@@ -235,12 +235,3 @@ function activateTab(tabId, contentId) {
     document.getElementById(tabId).setAttribute("aria-selected", "true");
     document.getElementById(contentId).classList.remove("hidden");
 }
-
-// Tự động ẩn thông báo sau 5 giây
-setTimeout(() => {
-    const toast = document.querySelector(".toast");
-    if (toast) {
-        toast.classList.add("opacity-0", "transition-opacity", "duration-500");
-        setTimeout(() => toast.remove(), 500); // Xóa sau khi ẩn
-    }
-}, 5000);
