@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
 // Kết nối đến MySQL
-const sequelize = new Sequelize('my_store', 'root', 'ngcjang1803', { // database , usename, password 
+const sequelize = new Sequelize('my_store', 'root', 'nguyenhuytan2004', { // database , usename, password 
   host: "localhost",
   dialect: "mysql",
   logging: false,

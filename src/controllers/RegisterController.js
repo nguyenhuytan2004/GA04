@@ -1,9 +1,9 @@
-const  User  = require('../models/user'); // Import model User
+const User = require("../models/user"); // Import model User
 
 class RegisterController {
     // [GET] /register.html - Hiển thị form đăng ký
     async index(req, res) {
-        res.render('register'); // Render form đăng ký (register.hbs)
+        res.render("register"); // Render form đăng ký (register.hbs)
     }
 
     // [POST] /register.html - Xử lý form đăng ký
@@ -13,23 +13,22 @@ class RegisterController {
 
             // Kiểm tra mật khẩu và xác nhận mật khẩu có khớp không
             if (password !== confirm_password) {
-                return res.status(400).send('Passwords do not match');
+                return res
+                    .status(400)
+                    .render("register", { error: "Passwords do not match!" });
             }
 
-            
-            
             // Tạo người dùng mới
             const newUser = await User.create({
                 email,
-                password_1: password, 
+                password_1: password,
             });
 
-            // Redirect hoặc gửi thông báo thành công
-            res.status(201).redirect('/login'); // Redirect đến trang đăng nhập
-
+            // Chuyển tới trang "login" và gửi thông báo thành công
+            res.status(201).render("login", { success: "Đăng kí thành công!" });
         } catch (error) {
             console.error(error);
-            res.status(500).send('Internal Server Error');
+            res.status(500).send("Internal Server Error");
         }
     }
 }

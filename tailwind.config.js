@@ -32,7 +32,12 @@ module.exports = {
                 line: "#E5E5E5",
             },
         },
-        extend: {},
+        extend: {
+            colors: {
+                success: "#22c55e", // Màu xanh lá
+                error: "#ef4444", // Màu đỏ
+            },
+        },
     },
     plugins: [],
 };
